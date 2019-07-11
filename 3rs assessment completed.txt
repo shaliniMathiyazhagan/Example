@@ -1,0 +1,71 @@
+--1. Write a query to display the name and hire date of any employee in the same
+---department as ADAMS. Exclude ADAMS
+select * from EMP;
+select Ename,HireDate from emp where DEPT IN (select dept from emp where ENAME='adams') and not ename='adams';
+
+---2---Create a query to display the employee numbers and names of all employees who earn more than the average salary. 
+----Sort the results in ascending order of salary
+select * from EMP;
+select EMPNO,ENAME,SAL from emp where sal > (select avg( sal) from emp) ORDER BY SAL asc;
+
+
+
+-----3---Write a query that displays the employee numbers and names of all employees who work
+----in a department with any employee whose last name contains a u.
+select E.EmployeeID,E.FirstName,E.LastName from EMP  
+join employees e on EMP.EMPNO=E.EmployeeID where exists
+(select empno from emp join DEPT on Dept.DEPTNO=EMP.DEPT group by dept.DEPTNO,empno) AND
+e.LastName like '%u%' OR e.LastName like '%a%'
+
+
+
+------4---Display the name, department number, and job of all employees whose
+
+--department location is ATLANTA.
+
+SELECT Ename,Dept,Job FROM EMP E JOIN 
+DEPT ON DEPT.DEPTNO=E.DEPT WHERE
+EXISTS(SELECT ENAME FROM EMP WHERE DEPT.LOC='ATLANTA')
+
+
+-----------5.---Display the name and salary of every employee who reports to JACKSON.
+select * from EMP;
+SELECT Ename,sal FROM Emp WHERE Mgr IN (SELECT Empno FROM EMP WHERE Ename='JACKSON')
+
+------6. Display the department number, name, and job for every employee in the ACCOUNTING department.
+
+SELECT D.deptno,D.Dname,E.job FROM DEPT D
+JOIN EMP E ON E.DEPT=D.DEPTNO WHERE D.DNAME='ACCOUNTING'
+
+--7. Modify the above query to display the employee numbers, names, and salaries
+--of all employees who earn more than the average salary and who work in a department 
+--with any employee with a u in their name.
+
+select E.EmployeeID,E.FirstName,E.LastName,e.Salary from EMP  
+join employees e on EMP.EMPNO=E.EmployeeID where exists
+(select empno from emp join DEPT on Dept.DEPTNO=EMP.DEPT group by dept.DEPTNO,empno) AND
+e.LastName like '%u%' OR e.LastName like '%a%' AND e.Salary> ANY(SELECT AVG(Salary) FROM EMPLOYEES)
+
+---------8--Write a query to display the top three earners in the EMPLOYEES table. 
+----Display their names and salaries.
+select * from employees;
+SELECT Lastname,Firstname,Salary FROM Employees WHERE salary IN (SELECT distinct top 3 salary from employees)order by salary desc;
+
+
+------9--Write a query to display the name, department number,
+---and salary of any employee whose department number and salary both match the department number
+----and salary of any employee who earns a commission
+select ename,DEpt,sal,comm from emp where
+sal in (select sal from emp where comm is not null) and dept in(select dept from  emp where comm is not null ) 
+and comm IN (select comm from emp where comm is null)
+
+
+-------10Create a query to display the last name, hire date, 
+---and salary for all employees who have the same salary and commission as POLK.
+select * from employees;
+select * from emp
+
+SELECT e.SAL,ems.LastName,e.HIREDATE FROM emp e
+full join employees ems on ems.EmployeeID=e.EMPNO WHERE Sal IN (
+    SELECT Sal FROM emp GROUP BY Sal,COMM HAVING COUNT(*) > 1
+)

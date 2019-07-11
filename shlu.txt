@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>SoftCrylic Freshers</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<B><h1 ><div align="centre">SOFTCRYLIC FRESHERS</div></h1></b>
+<h2><b>CEO</b></h2>
+<p><h3>John flavin</h3></n> John co-founded Softcrylic in 2000 after working in the technology sector in New York for several years. Under his leadership, the firm has grown from a team of 5 to 165 in 17 years and works with both Fortune 500 organizations as well as start-ups. John holds a degree from Saint John’s University in Minnesota and a MBA in Economics from University of Antwerp in Belgium. John lives and works from the Softcrylic office in Minneapolis, Minnesota.</p>
+<h2><b>CTO</b></h2>
+<p><h3>Bharath sritharan</h3>Bharath co-founded Softcrylic and acts as the Chief Technology Officer. He has 20+ years of experience in software engineering, product development and delivery management capabilities. Bharath heads the technology roadmap for Softcrylic and actively leads the strategy for new product development, operations, business development and delivery capabilities. He has an Engineering degree in Computer Science. Bharath lives and works out of Princeton, New Jersey.</p>
+<h2><b>Delivery Manager</b></h2>
+<p><h3>Murugavel</h3>
+
+</p>
+
+
+<h2><b>SERVICES</b></h2> 
+<h3>SOFTWARE DEVELOPMENT</H3>
+ <P>We offer a full range of software development services for each and every vertical and business domain</p> 
+<img src="Software.jpg" alt="imagedemo.html"/>
+<p>If you are a start-up or an established company, we are here to assist with solutions at every stage of your software development lifecycle, whether it is from the ground up development, proof of concept work, or helping maintain an existing application.</p>
+<H3>TEST ENGINEERING SERVICES</H3>
+<p>Software Testing services perfectly engineered for your Continuous Delivery and DevOps success.</p>
+<img src="test.jpg" alt="imagedemo.html"/>
+<p>We not only build quality but also create value by preventing defects before they occur</p>.
+<H3>DATA AND ANALYTICS</H3>
+<p>New revenue channels come from powerful insights. Make each byte of your online, offline data accountable for business growth using our expertise in digital analytics, advanced analytics and data services.</p>
+<img src="data.jpg" alt="imagedemo.html"/>
+<H3>DEVOPS</H3>
+<p>DevOps enables your Agile Development Teams to implementing Continuous Integration and Continuous Delivery to develop and launch products & new releases faster into the market. 
+</p><img src="devops.jpg" alt="imagedemo.html"/>
+<p>Softcrylic brings its’ agile expertise, automation capabilities, frameworks and market leading DevOps Tools to strengthen your collaborative development environment. Softcrylic delivers assessment, consulting, implementation of DevOps, and managed DevOps services to achieve rapid delivery.</p>
+
+
+
+
+
+
+
+
+<marquee width="100%" direction=side up height="100%"><b><i>The best preparation for tomorrow is doing your best today!!!!"</i></b>
+</marquee>
+
+</body>
+</html>
+

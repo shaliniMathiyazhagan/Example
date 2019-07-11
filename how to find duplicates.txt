@@ -1,0 +1,31 @@
+create table emplllll_sha
+            (
+			   EmpId int,
+			   EmpName varchar(100),
+			   EmpDesignation varchar(100),
+			   DepartmentId Int,
+			   ManagerId Int
+			)
+Insert into emplllll_sha select 2701,'Anupriya','trainee',201,1 union all
+                          select 2703,'dd','manager',203,3 union all
+	                      select 2702,'chithra','develops',202,2 union all
+						  select 2703,'dd','manager',203,3 union all
+						  select 2704,'dinesh','digital',204,4 union all
+						  select 2705,'gowsi','hr',205,5
+
+
+-----count
+select EmpName,EmpId,EmpDesignation ,DepartmentId , ManagerId  ,count(*) as tublicates
+from emplllll_sha
+group by EmpName,EmpId,EmpDesignation ,DepartmentId , ManagerId having count (*) > 1 
+
+
+
+------particular---
+select * from emplllll_sha
+select EmpName , count('empname')
+from emplllll_sha
+group by EmpName
+having count ('EmpName') > 1 
+
+
